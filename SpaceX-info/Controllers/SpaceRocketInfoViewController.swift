@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SpaceRocketInfoViewController.swift
 //  SpaceX-info
 //
 //  Created by 2lup on 27.08.2022.
@@ -7,13 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SpaceRocketInfoViewController: UIPageViewController {
 
     var index = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let networkManager = NetworkManager()
+        var rocketsData: [Rockets]?
+        rocketsData = networkManager.performRequest()
+        print(rocketsData)
+        
         switch index {
         case 0: view.backgroundColor = UIColor.blue
         case 1: view.backgroundColor = UIColor.green
@@ -23,6 +28,4 @@ class ViewController: UIViewController {
         }
     }
 
-
 }
-

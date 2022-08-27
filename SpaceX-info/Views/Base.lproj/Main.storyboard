@@ -16,10 +16,10 @@
             </objects>
             <point key="canvasLocation" x="-3" y="48"/>
         </scene>
-        <!--View Controller-->
+        <!--Space Rocket Info View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="oneNewsSID" id="BYZ-38-t0r" customClass="ViewController" customModule="SpaceX_info" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpaceRocketInfoSID" id="BYZ-38-t0r" customClass="SpaceRocketInfoViewController" customModule="SpaceX_info" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

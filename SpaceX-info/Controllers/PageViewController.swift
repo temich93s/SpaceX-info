@@ -8,10 +8,10 @@
 import UIKit
 
 class PageViewController: UIPageViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // устанавливаем себя источником данных для UIPageViewControllerDataSource
         self.dataSource = self
         
@@ -30,14 +30,14 @@ extension PageViewController: UIPageViewControllerDataSource {
     // return nil - означает, что страница предыдущая/следующая не существует
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         // получаем индекс предыдущего ViewController
-        let index = ((viewController as? ViewController)?.index ?? 0) - 1
+        let index = ((viewController as? SpaceRocketInfoViewController)?.index ?? 0) - 1
         return createPageViewController(for: index)
     }
 
     // viewControllerBefore - возвращаем следующуй ViewController
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         // получаем индекс следующего ViewController
-        let index = ((viewController as? ViewController)?.index ?? 0) + 1
+        let index = ((viewController as? SpaceRocketInfoViewController)?.index ?? 0) + 1
         return createPageViewController(for: index)
     }
     
@@ -49,7 +49,7 @@ extension PageViewController: UIPageViewControllerDataSource {
         } else {
             // instantiateViewController - Создает ViewController с указанным идентификатором (storyboard ID) и инициализирует его данными из storyboard
             // И кастим результат до нашего кастомного ViewController
-            let vc = storyboard?.instantiateViewController(withIdentifier: "oneNewsSID") as? ViewController
+            let vc = storyboard?.instantiateViewController(withIdentifier: "SpaceRocketInfoSID") as? SpaceRocketInfoViewController
             vc?.index = index
             return vc
         }
