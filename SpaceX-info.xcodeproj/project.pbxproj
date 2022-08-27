@@ -13,6 +13,7 @@
 		AA653CD128B9927E0067BD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA653CCF28B9927E0067BD51 /* Main.storyboard */; };
 		AA653CD328B992810067BD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA653CD228B992810067BD51 /* Assets.xcassets */; };
 		AA653CD628B992810067BD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA653CD428B992810067BD51 /* LaunchScreen.storyboard */; };
+		AA653CDE28B996B40067BD51 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CDD28B996B40067BD51 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AA653CD228B992810067BD51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA653CD528B992810067BD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA653CD728B992810067BD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA653CDD28B996B40067BD51 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AA653CC928B9927E0067BD51 /* AppDelegate.swift */,
 				AA653CCB28B9927E0067BD51 /* SceneDelegate.swift */,
 				AA653CCD28B9927E0067BD51 /* ViewController.swift */,
+				AA653CDD28B996B40067BD51 /* PageViewController.swift */,
 				AA653CCF28B9927E0067BD51 /* Main.storyboard */,
 				AA653CD228B992810067BD51 /* Assets.xcassets */,
 				AA653CD428B992810067BD51 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				AA653CCE28B9927E0067BD51 /* ViewController.swift in Sources */,
 				AA653CCA28B9927E0067BD51 /* AppDelegate.swift in Sources */,
 				AA653CCC28B9927E0067BD51 /* SceneDelegate.swift in Sources */,
+				AA653CDE28B996B40067BD51 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
