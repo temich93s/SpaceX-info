@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Rockets: Codable {
+struct Rocket: Codable {
     let name: String
     let first_flight: String
     let country: String
@@ -16,6 +16,7 @@ struct Rockets: Codable {
     let height, diameter: Size
     let mass: Weight
     let payload_weights: [PlayloadWeight]
+    let first_stage, second_stage: Stage
 }
 
 struct Size: Codable {
@@ -33,3 +34,8 @@ struct PlayloadWeight: Codable {
     let lb: Int
 }
 
+struct Stage: Codable {
+    let engines: Int
+    let fuel_amount_tons: Float
+    let burn_time_sec: Int?
+}

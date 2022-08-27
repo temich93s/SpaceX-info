@@ -12,6 +12,10 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let networkManager = NetworkManager()
+        var rocketsData: [Rocket]?
+        rocketsData = networkManager.performRequest()
+        
         // устанавливаем себя источником данных для UIPageViewControllerDataSource
         self.dataSource = self
         
@@ -53,8 +57,6 @@ extension PageViewController: UIPageViewControllerDataSource {
             vc?.index = index
             return vc
         }
-        
-
     }
 }
 
