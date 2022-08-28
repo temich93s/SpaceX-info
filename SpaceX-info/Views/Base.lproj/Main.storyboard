@@ -547,7 +547,7 @@
                         <outletCollection property="characteristicRocketViews" destination="OTc-Ls-sOI" collectionClass="NSMutableArray" id="exS-f0-o8w"/>
                         <outletCollection property="characteristicRocketViews" destination="SEn-Um-RIq" collectionClass="NSMutableArray" id="LIJ-o4-5NL"/>
                         <outletCollection property="characteristicRocketViews" destination="RPK-3c-KSq" collectionClass="NSMutableArray" id="t3m-MJ-XsI"/>
-                        <segue destination="5UV-rc-R9o" kind="show" identifier="SpaceRocketInfoToSetting" id="nsr-6R-HrA"/>
+                        <segue destination="5UV-rc-R9o" kind="presentation" identifier="SpaceRocketInfoToSetting" modalPresentationStyle="fullScreen" id="nsr-6R-HrA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -559,14 +559,14 @@
             <objects>
                 <viewController id="5UV-rc-R9o" customClass="SettingViewController" customModule="SpaceX_info" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MWg-Lp-2gL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yMO-Lu-N75">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translucent="NO" id="fYp-Fq-bWt">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textAttributes key="titleTextAttributes">
@@ -584,14 +584,14 @@
                                         </items>
                                     </navigationBar>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTP-mJ-vCg">
-                                        <rect key="frame" x="0.0" y="56" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="YBk-wp-uVH"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vin-k9-zH2">
-                                        <rect key="frame" x="0.0" y="106" width="414" height="692"/>
+                                        <rect key="frame" x="0.0" y="94" width="414" height="724"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>

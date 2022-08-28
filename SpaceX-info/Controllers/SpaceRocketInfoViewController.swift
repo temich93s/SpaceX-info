@@ -47,6 +47,10 @@ class SpaceRocketInfoViewController: UIViewController {
         setDataOnUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setDataOnUI()
+    }
+    
     @IBAction func settingButton(_ sender: UIButton) {
         performSegue(withIdentifier: "SpaceRocketInfoToSetting", sender: self)
     }
