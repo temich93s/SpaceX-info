@@ -116,7 +116,7 @@ class SpaceRocketInfoViewController: UIViewController {
             // Первый запуск, Страна, Стоимость запуска
             firstFlightValue.text = String(safeRocketData.first_flight)
             countryValue.text = String(safeRocketData.country)
-            costPerLaunchValue.text = String(safeRocketData.cost_per_launch)
+            costPerLaunchValue.text = String(safeRocketData.cost_per_launch) + "$"
             
             // Первая степень
             enginesFirstValue.text = String(safeRocketData.first_stage.engines)
