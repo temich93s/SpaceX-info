@@ -47,10 +47,6 @@ class SpaceRocketInfoViewController: UIViewController {
         setDataOnUI()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //view.backgroundColor = UIColor(named: "8E8E8F")
-    }
-    
     @IBAction func settingButton(_ sender: UIButton) {
         performSegue(withIdentifier: "SpaceRocketInfoToSetting", sender: self)
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1045F328BB2BA200DF5074 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1045F228BB2BA200DF5074 /* Media.xcassets */; };
+		AA1045FA28BB33D700DF5074 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1045F828BB33D700DF5074 /* SettingTableViewCell.swift */; };
+		AA1045FB28BB33D700DF5074 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1045F928BB33D700DF5074 /* SettingTableViewCell.xib */; };
 		AA653CCA28B9927E0067BD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CC928B9927E0067BD51 /* AppDelegate.swift */; };
 		AA653CCC28B9927E0067BD51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CCB28B9927E0067BD51 /* SceneDelegate.swift */; };
 		AA653CD128B9927E0067BD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA653CCF28B9927E0067BD51 /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA1045F228BB2BA200DF5074 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		AA1045F828BB33D700DF5074 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		AA1045F928BB33D700DF5074 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		AA653CC628B9927E0067BD51 /* SpaceX-info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA653CC928B9927E0067BD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA653CCB28B9927E0067BD51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +73,7 @@
 				AA653CC928B9927E0067BD51 /* AppDelegate.swift */,
 				AA653CCB28B9927E0067BD51 /* SceneDelegate.swift */,
 				AA653CD428B992810067BD51 /* LaunchScreen.storyboard */,
+				AA1045F228BB2BA200DF5074 /* Media.xcassets */,
 				AA653CD728B992810067BD51 /* Info.plist */,
 				AA653CE328B9A3E10067BD51 /* Controllers */,
 				AA653CE228B9A3D50067BD51 /* Views */,
@@ -89,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				AA653CCF28B9927E0067BD51 /* Main.storyboard */,
+				AA1045F928BB33D700DF5074 /* SettingTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,6 +107,7 @@
 				AA653CDF28B9A3A90067BD51 /* SpaceRocketInfoViewController.swift */,
 				AA653CDD28B996B40067BD51 /* PageViewController.swift */,
 				AA700D2528BB18AC00AAAD1A /* SettingViewController.swift */,
+				AA1045F828BB33D700DF5074 /* SettingTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA653CD628B992810067BD51 /* LaunchScreen.storyboard in Resources */,
+				AA1045F328BB2BA200DF5074 /* Media.xcassets in Resources */,
+				AA1045FB28BB33D700DF5074 /* SettingTableViewCell.xib in Resources */,
 				AA653CD128B9927E0067BD51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +187,7 @@
 				AA653CE028B9A3A90067BD51 /* SpaceRocketInfoViewController.swift in Sources */,
 				AA700D2828BB1ED000AAAD1A /* ScaleOfNotation.swift in Sources */,
 				AA653CCA28B9927E0067BD51 /* AppDelegate.swift in Sources */,
+				AA1045FA28BB33D700DF5074 /* SettingTableViewCell.swift in Sources */,
 				AA653CE528B9A4F20067BD51 /* NetworkManager.swift in Sources */,
 				AA653CE728B9A8F80067BD51 /* Rockets.swift in Sources */,
 				AA653CCC28B9927E0067BD51 /* SceneDelegate.swift in Sources */,
@@ -323,8 +335,8 @@
 		AA653CDB28B992810067BD51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VJ39792262;
@@ -351,8 +363,8 @@
 		AA653CDC28B992810067BD51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VJ39792262;
