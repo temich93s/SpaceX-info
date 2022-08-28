@@ -47,7 +47,12 @@ class SpaceRocketInfoViewController: UIViewController {
         setDataOnUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //view.backgroundColor = UIColor(named: "8E8E8F")
+    }
+    
     @IBAction func settingButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "SpaceRocketInfoToSetting", sender: self)
     }
     
     @IBAction func watchLaunch(_ sender: UIButton) {
@@ -64,6 +69,7 @@ class SpaceRocketInfoViewController: UIViewController {
     func setDataOnUI() {
         if let safeRocketData = rocketData {
             
+            // Изображение ракеты
             let randomNumberImage = Int.random(in: 1...safeRocketData.flickr_images.count) - 1
             let url = URL(string: safeRocketData.flickr_images[randomNumberImage])
             // в асиинхроном потоке пытаемся получить изображение из сети (делаем это в ассинхроном, что бы не заморозить UI)
@@ -75,21 +81,44 @@ class SpaceRocketInfoViewController: UIViewController {
                 }
             }
             
+            // Наименование ракеты
             name.text = safeRocketData.name
             
-            heightValue.text = String(safeRocketData.height.meters)
-            height.text = "Высота, ft"
-            diameterValue.text = String(safeRocketData.diameter.meters)
-            diameter.text = "Диаметр, ft"
-            massValue.text = String(safeRocketData.mass.kg)
-            mass.text = "Масса, lb"
-            payloadWeightsValue.text = String(safeRocketData.payload_weights[0].kg)
-            payloadWeights.text = "Нагрузка, lb"
+            // Горизонтальный стек
+            if ScaleOfNotation.heightScale == "m" {
+                heightValue.text = String(safeRocketData.height.meters)
+            } else if ScaleOfNotation.heightScale == "ft" {
+                heightValue.text = String(safeRocketData.height.feet)
+            }
+            height.text = "Высота, \(ScaleOfNotation.heightScale)"
             
+            if ScaleOfNotation.diameterScale == "m" {
+                diameterValue.text = String(safeRocketData.diameter.meters)
+            } else if ScaleOfNotation.diameterScale == "ft" {
+                diameterValue.text = String(safeRocketData.diameter.feet)
+            }
+            diameter.text = "Диаметр, \(ScaleOfNotation.diameterScale)"
+            
+            if ScaleOfNotation.massScale == "kg" {
+                massValue.text = String(safeRocketData.mass.kg)
+            } else if ScaleOfNotation.massScale == "lb" {
+                massValue.text = String(safeRocketData.mass.lb)
+            }
+            mass.text = "Масса, \(ScaleOfNotation.massScale)"
+            
+            if ScaleOfNotation.payloadWeightsScale == "kg" {
+                payloadWeightsValue.text = String(safeRocketData.payload_weights[0].kg)
+            } else if ScaleOfNotation.payloadWeightsScale == "lb" {
+                payloadWeightsValue.text = String(safeRocketData.payload_weights[0].lb)
+            }
+            payloadWeights.text = "Нагрузка, \(ScaleOfNotation.payloadWeightsScale)"
+            
+            // Первый запуск, Страна, Стоимость запуска
             firstFlightValue.text = String(safeRocketData.first_flight)
             countryValue.text = String(safeRocketData.country)
             costPerLaunchValue.text = String(safeRocketData.cost_per_launch)
             
+            // Первая степень
             enginesFirstValue.text = String(safeRocketData.first_stage.engines)
             fuelAmountTonsFirstValue.text = String(safeRocketData.first_stage.fuel_amount_tons)
             if let burn_time_sec = safeRocketData.first_stage.burn_time_sec {
@@ -98,6 +127,7 @@ class SpaceRocketInfoViewController: UIViewController {
                 burnTimeSecFirstValue.text = "-"
             }
             
+            // Вторая ступень
             enginesSecondValue.text = String(safeRocketData.second_stage.engines)
             fuelAmountTonsSecondValue.text = String(safeRocketData.second_stage.fuel_amount_tons)
             if let burn_time_sec = safeRocketData.second_stage.burn_time_sec {
