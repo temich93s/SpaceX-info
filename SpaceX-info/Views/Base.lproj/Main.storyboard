@@ -33,7 +33,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="11i-hP-o0z">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1420"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFg-4Z-lWq">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFg-4Z-lWq">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="8a1-3c-OMf"/>
@@ -239,17 +239,17 @@
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-VX-O9t">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-VX-O9t">
                                                 <rect key="frame" x="0.0" y="670" width="414" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страна" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwU-rL-t8s">
-                                                        <rect key="frame" x="20" y="8" width="189.5" height="44"/>
+                                                        <rect key="frame" x="20" y="8" width="73.5" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ХХХXX" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5L-v0-MIV">
-                                                        <rect key="frame" x="209.5" y="8" width="184.5" height="44"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="ХХХXX ХХХXX ХХХXX ХХХXX ХХХXX" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="U5L-v0-MIV">
+                                                        <rect key="frame" x="113.5" y="8" width="280.5" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -523,9 +523,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vWp-It-QXf"/>
                     <connections>
-                        <outlet property="burnTimeSecFirstScale" destination="cUb-v1-BWl" id="Dub-Ls-WKv"/>
                         <outlet property="burnTimeSecFirstValue" destination="e9t-Ee-tdq" id="La5-Bd-lbA"/>
-                        <outlet property="burnTimeSecSecondScale" destination="Lex-K6-cJf" id="Mnh-TN-Hag"/>
                         <outlet property="burnTimeSecSecondValue" destination="Yov-XA-y4F" id="1nf-1R-gEJ"/>
                         <outlet property="costPerLaunchValue" destination="l1s-Jk-vxw" id="Z5E-UR-AJx"/>
                         <outlet property="countryValue" destination="U5L-v0-MIV" id="4fZ-zC-ew1"/>
@@ -535,9 +533,7 @@
                         <outlet property="enginesSecondValue" destination="zx6-ev-3OU" id="IRD-cx-rVF"/>
                         <outlet property="firstFlightValue" destination="liN-Vh-bEB" id="x1H-ly-dy0"/>
                         <outlet property="flickrImages" destination="UFg-4Z-lWq" id="gbJ-CN-zbf"/>
-                        <outlet property="fuelAmountTonsFirstScale" destination="XhT-ta-Vyh" id="LY9-g1-eLN"/>
                         <outlet property="fuelAmountTonsFirstValue" destination="W50-ej-akZ" id="olm-ME-UlU"/>
-                        <outlet property="fuelAmountTonsSecondScale" destination="QdP-aM-yuG" id="6Z7-TB-GHu"/>
                         <outlet property="fuelAmountTonsSecondValue" destination="U6V-cF-jFQ" id="cPq-pG-J6Q"/>
                         <outlet property="height" destination="pgm-Up-NhT" id="RVf-cA-svJ"/>
                         <outlet property="heightValue" destination="F8K-rS-HMq" id="nBx-bV-L3V"/>
@@ -546,6 +542,7 @@
                         <outlet property="name" destination="0Xz-4i-HaV" id="6d1-Rw-K5Q"/>
                         <outlet property="payloadWeights" destination="RJ8-yX-w4z" id="aBg-LP-1uv"/>
                         <outlet property="payloadWeightsValue" destination="IPx-LB-rVb" id="wJ1-jE-g9I"/>
+                        <outlet property="scrollView" destination="EvN-Gb-WKv" id="0SJ-r3-H39"/>
                         <outlet property="watchLaunchButton" destination="tmD-e8-frm" id="527-kt-576"/>
                         <outletCollection property="characteristicRocketViews" destination="8Cf-BL-qEr" collectionClass="NSMutableArray" id="vUd-tw-Mae"/>
                         <outletCollection property="characteristicRocketViews" destination="OTc-Ls-sOI" collectionClass="NSMutableArray" id="exS-f0-o8w"/>

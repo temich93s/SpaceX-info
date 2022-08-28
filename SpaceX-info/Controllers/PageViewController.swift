@@ -9,20 +9,18 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
+    private var rocketsData: [Rocket]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let networkManager = NetworkManager()
-        var rocketsData: [Rocket]?
+        var networkManager = NetworkManager()
+        networkManager.delegate = self
         rocketsData = networkManager.performRequest()
-        
+                
         // устанавливаем себя источником данных для UIPageViewControllerDataSource
         self.dataSource = self
         
-        // заполняем значение по умолчанию передавая массив с одним ViewController который отобразится по умолчанию (setViewControllers можно добавить комплишнхендлер)
-        if let vc = self.createPageViewController(for: 0) {
-            setViewControllers([vc], direction: .forward, animated: true)
-        }
     }
 }
 
@@ -55,8 +53,19 @@ extension PageViewController: UIPageViewControllerDataSource {
             // И кастим результат до нашего кастомного ViewController
             let vc = storyboard?.instantiateViewController(withIdentifier: "SpaceRocketInfoSID") as? SpaceRocketInfoViewController
             vc?.index = index
+            vc?.rocketData = rocketsData?[index]
             return vc
         }
     }
 }
 
+extension PageViewController: NetworkManagerDelegate {
+    func didUpdateRocketsData(_ networkManager: NetworkManager, data: [Rocket]?) {
+        rocketsData = data
+        
+        // устанавливаем ViewController, что первым отобразится на экране PageViewController, передавая массив с одним ViewController (setViewControllers можно добавить комплишнхендлер)
+        if let vc = self.createPageViewController(for: 0) {
+            self.setViewControllers([vc], direction: .forward, animated: true)
+        }
+    }
+}
