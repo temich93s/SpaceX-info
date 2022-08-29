@@ -16,10 +16,12 @@
 		AA653CD628B992810067BD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA653CD428B992810067BD51 /* LaunchScreen.storyboard */; };
 		AA653CDE28B996B40067BD51 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CDD28B996B40067BD51 /* PageViewController.swift */; };
 		AA653CE028B9A3A90067BD51 /* SpaceRocketInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CDF28B9A3A90067BD51 /* SpaceRocketInfoViewController.swift */; };
-		AA653CE528B9A4F20067BD51 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CE428B9A4F20067BD51 /* NetworkManager.swift */; };
+		AA653CE528B9A4F20067BD51 /* NetworkManagerRockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CE428B9A4F20067BD51 /* NetworkManagerRockets.swift */; };
 		AA653CE728B9A8F80067BD51 /* Rockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CE628B9A8F80067BD51 /* Rockets.swift */; };
 		AA700D2628BB18AC00AAAD1A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA700D2528BB18AC00AAAD1A /* SettingViewController.swift */; };
 		AA700D2828BB1ED000AAAD1A /* ScaleOfNotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA700D2728BB1ED000AAAD1A /* ScaleOfNotation.swift */; };
+		AA7AF9B028BCD99200C982D5 /* Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7AF9AF28BCD99200C982D5 /* Launches.swift */; };
+		AA7AF9B228BCDEF900C982D5 /* NetworkManagerLaunches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7AF9B128BCDEF900C982D5 /* NetworkManagerLaunches.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +36,12 @@
 		AA653CD728B992810067BD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA653CDD28B996B40067BD51 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		AA653CDF28B9A3A90067BD51 /* SpaceRocketInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceRocketInfoViewController.swift; sourceTree = "<group>"; };
-		AA653CE428B9A4F20067BD51 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AA653CE428B9A4F20067BD51 /* NetworkManagerRockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerRockets.swift; sourceTree = "<group>"; };
 		AA653CE628B9A8F80067BD51 /* Rockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rockets.swift; sourceTree = "<group>"; };
 		AA700D2528BB18AC00AAAD1A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		AA700D2728BB1ED000AAAD1A /* ScaleOfNotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleOfNotation.swift; sourceTree = "<group>"; };
+		AA7AF9AF28BCD99200C982D5 /* Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launches.swift; sourceTree = "<group>"; };
+		AA7AF9B128BCDEF900C982D5 /* NetworkManagerLaunches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerLaunches.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +89,10 @@
 		AA653CE128B9A3CD0067BD51 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AA653CE428B9A4F20067BD51 /* NetworkManager.swift */,
+				AA653CE428B9A4F20067BD51 /* NetworkManagerRockets.swift */,
 				AA653CE628B9A8F80067BD51 /* Rockets.swift */,
+				AA7AF9B128BCDEF900C982D5 /* NetworkManagerLaunches.swift */,
+				AA7AF9AF28BCD99200C982D5 /* Launches.swift */,
 				AA700D2728BB1ED000AAAD1A /* ScaleOfNotation.swift */,
 			);
 			path = Models;
@@ -184,11 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7AF9B228BCDEF900C982D5 /* NetworkManagerLaunches.swift in Sources */,
 				AA653CE028B9A3A90067BD51 /* SpaceRocketInfoViewController.swift in Sources */,
 				AA700D2828BB1ED000AAAD1A /* ScaleOfNotation.swift in Sources */,
+				AA7AF9B028BCD99200C982D5 /* Launches.swift in Sources */,
 				AA653CCA28B9927E0067BD51 /* AppDelegate.swift in Sources */,
 				AA1045FA28BB33D700DF5074 /* SettingTableViewCell.swift in Sources */,
-				AA653CE528B9A4F20067BD51 /* NetworkManager.swift in Sources */,
+				AA653CE528B9A4F20067BD51 /* NetworkManagerRockets.swift in Sources */,
 				AA653CE728B9A8F80067BD51 /* Rockets.swift in Sources */,
 				AA653CCC28B9927E0067BD51 /* SceneDelegate.swift in Sources */,
 				AA700D2628BB18AC00AAAD1A /* SettingViewController.swift in Sources */,

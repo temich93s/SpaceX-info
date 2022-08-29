@@ -10,13 +10,18 @@ import UIKit
 class PageViewController: UIPageViewController {
     
     private var rocketsData: [Rocket]?
+    private var launchesData: [Launches]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var networkManager = NetworkManager()
-        networkManager.delegate = self
-        rocketsData = networkManager.performRequest()
+        var networkManagerRockets = NetworkManagerRockets()
+        networkManagerRockets.delegate = self
+        rocketsData = networkManagerRockets.performRequest()
+        
+        var networkManagerLaunches = NetworkManagerLaunches()
+        networkManagerLaunches.delegate = self
+        launchesData = networkManagerLaunches.performRequest()
                 
         // устанавливаем себя источником данных для UIPageViewControllerDataSource
         self.dataSource = self
@@ -59,13 +64,19 @@ extension PageViewController: UIPageViewControllerDataSource {
     }
 }
 
-extension PageViewController: NetworkManagerDelegate {
-    func didUpdateRocketsData(_ networkManager: NetworkManager, data: [Rocket]?) {
-        rocketsData = data
+extension PageViewController: NetworkManagerRocketsDelegate {
+    func didUpdateRocketsData(_ networkManager: NetworkManagerRockets, rockets: [Rocket]?) {
+        rocketsData = rockets
         
         // устанавливаем ViewController, что первым отобразится на экране PageViewController, передавая массив с одним ViewController (setViewControllers можно добавить комплишнхендлер)
         if let vc = self.createPageViewController(for: 0) {
             self.setViewControllers([vc], direction: .forward, animated: true)
         }
+    }
+}
+
+extension PageViewController: NetworkManagerLaunchesDelegate {
+    func didUpdateLaunchesData(_ networkManager: NetworkManagerLaunches, launches: [Launches]?) {
+        launchesData = launches
     }
 }
