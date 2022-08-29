@@ -11,24 +11,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="73" id="KGk-i7-Jjw" customClass="SettingTableViewCell" customModule="SpaceX_info" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="389" height="73"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableSettingCell" rowHeight="85" id="KGk-i7-Jjw" customClass="SettingTableViewCell" customModule="SpaceX_info" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="389" height="73"/>
+                <rect key="frame" x="0.0" y="0.0" width="349" height="85"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MQo-Fl-riq">
-                        <rect key="frame" x="20" y="10" width="349" height="50"/>
+                        <rect key="frame" x="20" y="10" width="309" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X10-5O-xW7">
-                                <rect key="frame" x="0.0" y="0.0" width="201" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="161" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qZ0-gX-Mdt">
-                                <rect key="frame" x="209" y="0.0" width="140" height="51"/>
+                                <rect key="frame" x="169" y="0.0" width="140" height="51"/>
                                 <color key="backgroundColor" name="8E8E8F"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="jVp-1r-RHO"/>
@@ -60,12 +60,12 @@
                 <outlet property="label" destination="X10-5O-xW7" id="7kG-uG-h25"/>
                 <outlet property="segmentedControl" destination="qZ0-gX-Mdt" id="W2x-JV-xqt"/>
             </connections>
-            <point key="canvasLocation" x="141.30434782608697" y="8.3705357142857135"/>
+            <point key="canvasLocation" x="112.31884057971016" y="12.388392857142856"/>
         </tableViewCell>
     </objects>
     <resources>
         <namedColor name="8E8E8F">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

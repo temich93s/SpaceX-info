@@ -485,6 +485,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="watchLaunch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCy-eG-Atw"/>
+                                                            <segue destination="qpW-Qe-M2B" kind="presentation" modalPresentationStyle="fullScreen" id="cEY-rs-8Pz"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -590,7 +591,7 @@
                                             <constraint firstAttribute="height" constant="50" id="YBk-wp-uVH"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vin-k9-zH2">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vin-k9-zH2">
                                         <rect key="frame" x="0.0" y="94" width="414" height="724"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
@@ -613,7 +614,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6D4-BF-OVs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2552" y="48"/>
+            <point key="canvasLocation" x="2517" y="48"/>
+        </scene>
+        <!--Launches View Controller-->
+        <scene sceneID="Qmv-pE-ueI">
+            <objects>
+                <viewController id="qpW-Qe-M2B" customClass="LaunchesViewController" customModule="SpaceX_info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cSg-o7-r9i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XcV-L8-NEr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translucent="NO" id="fmv-ic-gSU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="XXXXX" id="6pT-E5-R2P">
+                                                <barButtonItem key="leftBarButtonItem" title="&lt; Назад" id="gza-kz-rtm">
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="backButtonPressed:" destination="qpW-Qe-M2B" id="pFu-Uz-ZGs"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsg-JE-gHx">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SBb-Ul-7Oo"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GoS-rH-Pdq">
+                                        <rect key="frame" x="0.0" y="94" width="414" height="724"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TJu-Yl-EBp"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XcV-L8-NEr" firstAttribute="top" secondItem="TJu-Yl-EBp" secondAttribute="top" id="2zD-E5-dBl"/>
+                            <constraint firstItem="XcV-L8-NEr" firstAttribute="bottom" secondItem="TJu-Yl-EBp" secondAttribute="bottom" id="hJJ-b4-wlZ"/>
+                            <constraint firstItem="XcV-L8-NEr" firstAttribute="trailing" secondItem="TJu-Yl-EBp" secondAttribute="trailing" id="jqY-ZR-qyK"/>
+                            <constraint firstItem="XcV-L8-NEr" firstAttribute="leading" secondItem="TJu-Yl-EBp" secondAttribute="leading" id="uvR-7e-Thb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8iC-ar-HYd"/>
+                    <connections>
+                        <outlet property="tableView" destination="GoS-rH-Pdq" id="hy1-zv-dCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1m0-Al-BDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3376.811594202899" y="47.544642857142854"/>
         </scene>
     </scenes>
     <resources>
@@ -622,7 +685,7 @@
             <color red="0.1289999932050705" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="8E8E8F">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

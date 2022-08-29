@@ -22,6 +22,9 @@
 		AA700D2828BB1ED000AAAD1A /* ScaleOfNotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA700D2728BB1ED000AAAD1A /* ScaleOfNotation.swift */; };
 		AA7AF9B028BCD99200C982D5 /* Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7AF9AF28BCD99200C982D5 /* Launches.swift */; };
 		AA7AF9B228BCDEF900C982D5 /* NetworkManagerLaunches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7AF9B128BCDEF900C982D5 /* NetworkManagerLaunches.swift */; };
+		AA7AF9B528BCE6BC00C982D5 /* LaunchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7AF9B328BCE6BC00C982D5 /* LaunchesTableViewCell.swift */; };
+		AA7AF9B628BCE6BC00C982D5 /* LaunchesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7AF9B428BCE6BC00C982D5 /* LaunchesTableViewCell.xib */; };
+		AA7AF9B828BCEAF200C982D5 /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7AF9B728BCEAF200C982D5 /* LaunchesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		AA700D2728BB1ED000AAAD1A /* ScaleOfNotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleOfNotation.swift; sourceTree = "<group>"; };
 		AA7AF9AF28BCD99200C982D5 /* Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launches.swift; sourceTree = "<group>"; };
 		AA7AF9B128BCDEF900C982D5 /* NetworkManagerLaunches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerLaunches.swift; sourceTree = "<group>"; };
+		AA7AF9B328BCE6BC00C982D5 /* LaunchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesTableViewCell.swift; sourceTree = "<group>"; };
+		AA7AF9B428BCE6BC00C982D5 /* LaunchesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchesTableViewCell.xib; sourceTree = "<group>"; };
+		AA7AF9B728BCEAF200C982D5 /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 			children = (
 				AA653CCF28B9927E0067BD51 /* Main.storyboard */,
 				AA1045F928BB33D700DF5074 /* SettingTableViewCell.xib */,
+				AA7AF9B428BCE6BC00C982D5 /* LaunchesTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +121,8 @@
 				AA653CDD28B996B40067BD51 /* PageViewController.swift */,
 				AA700D2528BB18AC00AAAD1A /* SettingViewController.swift */,
 				AA1045F828BB33D700DF5074 /* SettingTableViewCell.swift */,
+				AA7AF9B728BCEAF200C982D5 /* LaunchesViewController.swift */,
+				AA7AF9B328BCE6BC00C982D5 /* LaunchesTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +188,7 @@
 				AA653CD628B992810067BD51 /* LaunchScreen.storyboard in Resources */,
 				AA1045F328BB2BA200DF5074 /* Media.xcassets in Resources */,
 				AA1045FB28BB33D700DF5074 /* SettingTableViewCell.xib in Resources */,
+				AA7AF9B628BCE6BC00C982D5 /* LaunchesTableViewCell.xib in Resources */,
 				AA653CD128B9927E0067BD51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +207,9 @@
 				AA653CCA28B9927E0067BD51 /* AppDelegate.swift in Sources */,
 				AA1045FA28BB33D700DF5074 /* SettingTableViewCell.swift in Sources */,
 				AA653CE528B9A4F20067BD51 /* NetworkManagerRockets.swift in Sources */,
+				AA7AF9B828BCEAF200C982D5 /* LaunchesViewController.swift in Sources */,
 				AA653CE728B9A8F80067BD51 /* Rockets.swift in Sources */,
+				AA7AF9B528BCE6BC00C982D5 /* LaunchesTableViewCell.swift in Sources */,
 				AA653CCC28B9927E0067BD51 /* SceneDelegate.swift in Sources */,
 				AA700D2628BB18AC00AAAD1A /* SettingViewController.swift in Sources */,
 				AA653CDE28B996B40067BD51 /* PageViewController.swift in Sources */,

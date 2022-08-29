@@ -16,7 +16,7 @@ class SettingViewController: UIViewController {
         
         tableView.dataSource = self
         
-        tableView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
+        tableView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableSettingCell")
     }
     
     @IBAction func closeButton(_ sender: UIBarButtonItem) {
@@ -31,7 +31,7 @@ extension SettingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! SettingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableSettingCell", for: indexPath) as! SettingTableViewCell
     
         cell.indexCell = indexPath.row
         
