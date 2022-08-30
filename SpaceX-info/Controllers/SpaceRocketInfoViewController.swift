@@ -40,15 +40,22 @@ class SpaceRocketInfoViewController: UIViewController {
     
     var index = 0
     var rocketData: Rocket?
+    var launchesData: [Launches]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        setDataOnUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setDataOnUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "SpaceRocketInfoToLaunches" else { return }
+        guard let destination = segue.destination as? LaunchesViewController else { return }
+        destination.launchesData = launchesData
+        destination.rocketData = rocketData
     }
     
     @IBAction func settingButton(_ sender: UIButton) {
@@ -56,6 +63,7 @@ class SpaceRocketInfoViewController: UIViewController {
     }
     
     @IBAction func watchLaunch(_ sender: UIButton) {
+        performSegue(withIdentifier: "SpaceRocketInfoToLaunches", sender: self)
     }
     
     func setUI() {

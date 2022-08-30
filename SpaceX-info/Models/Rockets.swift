@@ -17,6 +17,7 @@ struct Rocket: Codable {
     let mass: Weight
     let payload_weights: [PlayloadWeight]
     let first_stage, second_stage: Stage
+    let id: String
 }
 
 struct Size: Codable {

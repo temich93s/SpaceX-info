@@ -59,6 +59,7 @@ extension PageViewController: UIPageViewControllerDataSource {
             let vc = storyboard?.instantiateViewController(withIdentifier: "SpaceRocketInfoSID") as? SpaceRocketInfoViewController
             vc?.index = index
             vc?.rocketData = rocketsData?[index]
+            vc?.launchesData = launchesData
             return vc
         }
     }
@@ -68,9 +69,11 @@ extension PageViewController: NetworkManagerRocketsDelegate {
     func didUpdateRocketsData(_ networkManager: NetworkManagerRockets, rockets: [Rocket]?) {
         rocketsData = rockets
         
-        // устанавливаем ViewController, что первым отобразится на экране PageViewController, передавая массив с одним ViewController (setViewControllers можно добавить комплишнхендлер)
-        if let vc = self.createPageViewController(for: 0) {
-            self.setViewControllers([vc], direction: .forward, animated: true)
+        if launchesData != nil {
+            // устанавливаем ViewController, что первым отобразится на экране PageViewController, передавая массив с одним ViewController (setViewControllers можно добавить комплишнхендлер)
+            if let vc = self.createPageViewController(for: 0) {
+                self.setViewControllers([vc], direction: .forward, animated: true)
+            }
         }
     }
 }
@@ -78,5 +81,12 @@ extension PageViewController: NetworkManagerRocketsDelegate {
 extension PageViewController: NetworkManagerLaunchesDelegate {
     func didUpdateLaunchesData(_ networkManager: NetworkManagerLaunches, launches: [Launches]?) {
         launchesData = launches
+        
+        if rocketsData != nil {
+            // устанавливаем ViewController, что первым отобразится на экране PageViewController, передавая массив с одним ViewController (setViewControllers можно добавить комплишнхендлер)
+            if let vc = self.createPageViewController(for: 0) {
+                self.setViewControllers([vc], direction: .forward, animated: true)
+            }
+        }
     }
 }

@@ -12,5 +12,4 @@ struct Launches: Codable {
     let success: Bool?
     let name: String
     let date_utc: String
-    let date_unix: Int
 }

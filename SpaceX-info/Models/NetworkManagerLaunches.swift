@@ -28,7 +28,6 @@ struct NetworkManagerLaunches {
                             DispatchQueue.main.async {
                                 delegate?.didUpdateLaunchesData(self, launches: launchesData)
                             }
-                            print(launchesData)
                         } catch {
                             print(error)
                         }

@@ -13,10 +13,12 @@
         <!--Page View Controller-->
         <scene sceneID="1Fw-Pc-Zmj">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="589-tb-6dv" customClass="PageViewController" customModule="SpaceX_info" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="589-tb-6dv" customClass="PageViewController" customModule="SpaceX_info" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nIg-jb-9Py"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gP-2t-uLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="48"/>
+            <point key="canvasLocation" x="1847.826086956522" y="47.544642857142854"/>
         </scene>
         <!--Space Rocket Info View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -485,7 +487,6 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="watchLaunch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCy-eG-Atw"/>
-                                                            <segue destination="qpW-Qe-M2B" kind="presentation" modalPresentationStyle="fullScreen" id="cEY-rs-8Pz"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -549,11 +550,12 @@
                         <outletCollection property="characteristicRocketViews" destination="SEn-Um-RIq" collectionClass="NSMutableArray" id="LIJ-o4-5NL"/>
                         <outletCollection property="characteristicRocketViews" destination="RPK-3c-KSq" collectionClass="NSMutableArray" id="t3m-MJ-XsI"/>
                         <segue destination="5UV-rc-R9o" kind="presentation" identifier="SpaceRocketInfoToSetting" modalPresentationStyle="fullScreen" id="nsr-6R-HrA"/>
+                        <segue destination="qpW-Qe-M2B" kind="presentation" identifier="SpaceRocketInfoToLaunches" modalPresentationStyle="fullScreen" id="u9X-bS-u75"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708.6956521739132" y="47.544642857142854"/>
+            <point key="canvasLocation" x="2618.840579710145" y="47.544642857142854"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="rcP-XO-uPZ">
@@ -614,7 +616,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6D4-BF-OVs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2517" y="48"/>
+            <point key="canvasLocation" x="3480" y="48"/>
         </scene>
         <!--Launches View Controller-->
         <scene sceneID="Qmv-pE-ueI">
@@ -676,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1m0-Al-BDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.811594202899" y="47.544642857142854"/>
+            <point key="canvasLocation" x="3480" y="-638"/>
         </scene>
     </scenes>
     <resources>
