@@ -16,15 +16,7 @@ class SpaceRocketInfoViewController: UIViewController {
     
     @IBOutlet weak var watchLaunchButton: UIButton!
     
-    @IBOutlet var characteristicRocketViews: [UIView]!
-    @IBOutlet weak var heightValue: UILabel!
-    @IBOutlet weak var height: UILabel!
-    @IBOutlet weak var diameterValue: UILabel!
-    @IBOutlet weak var diameter: UILabel!
-    @IBOutlet weak var massValue: UILabel!
-    @IBOutlet weak var mass: UILabel!
-    @IBOutlet weak var payloadWeightsValue: UILabel!
-    @IBOutlet weak var payloadWeights: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var firstFlightValue: UILabel!
     @IBOutlet weak var countryValue: UILabel!
@@ -44,11 +36,16 @@ class SpaceRocketInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: "CharacteristicRocketCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ReusableCharacteristicRocket")
+        
         setUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setDataOnUI()
+        collectionView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,9 +64,6 @@ class SpaceRocketInfoViewController: UIViewController {
     }
     
     func setUI() {
-        for characteristicRocketView in characteristicRocketViews {
-            characteristicRocketView.layer.cornerRadius = characteristicRocketView.frame.height / 4
-        }
         watchLaunchButton.layer.cornerRadius = watchLaunchButton.frame.height / 4
         scrollView.showsVerticalScrollIndicator = false
     }
@@ -91,35 +85,6 @@ class SpaceRocketInfoViewController: UIViewController {
             
             // Наименование ракеты
             name.text = safeRocketData.name
-            
-            // Горизонтальный стек
-            if ScaleOfNotation.heightScale == "m" {
-                heightValue.text = String(safeRocketData.height.meters)
-            } else if ScaleOfNotation.heightScale == "ft" {
-                heightValue.text = String(safeRocketData.height.feet)
-            }
-            height.text = "Высота, \(ScaleOfNotation.heightScale)"
-            
-            if ScaleOfNotation.diameterScale == "m" {
-                diameterValue.text = String(safeRocketData.diameter.meters)
-            } else if ScaleOfNotation.diameterScale == "ft" {
-                diameterValue.text = String(safeRocketData.diameter.feet)
-            }
-            diameter.text = "Диаметр, \(ScaleOfNotation.diameterScale)"
-            
-            if ScaleOfNotation.massScale == "kg" {
-                massValue.text = String(safeRocketData.mass.kg)
-            } else if ScaleOfNotation.massScale == "lb" {
-                massValue.text = String(safeRocketData.mass.lb)
-            }
-            mass.text = "Масса, \(ScaleOfNotation.massScale)"
-            
-            if ScaleOfNotation.payloadWeightsScale == "kg" {
-                payloadWeightsValue.text = String(safeRocketData.payload_weights[0].kg)
-            } else if ScaleOfNotation.payloadWeightsScale == "lb" {
-                payloadWeightsValue.text = String(safeRocketData.payload_weights[0].lb)
-            }
-            payloadWeights.text = "Нагрузка, \(ScaleOfNotation.payloadWeightsScale)"
             
             // Первый запуск, Страна, Стоимость запуска
             firstFlightValue.text = String(safeRocketData.first_flight)
@@ -145,5 +110,56 @@ class SpaceRocketInfoViewController: UIViewController {
             }
         }
     }
+    
+}
+
+extension SpaceRocketInfoViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReusableCharacteristicRocket", for: indexPath) as! CharacteristicRocketCollectionViewCell
+        
+        cell.characteristicRocketView.layer.cornerRadius = cell.characteristicRocketView.frame.height / 4
+        
+        if let safeRocketData = rocketData {
+            switch indexPath.row {
+            case 0:
+                if ScaleOfNotation.heightScale == "m" {
+                    cell.value.text = String(safeRocketData.height.meters)
+                } else if ScaleOfNotation.heightScale == "ft" {
+                    cell.value.text = String(safeRocketData.height.feet)
+                }
+                cell.characteristic.text = "Высота, \(ScaleOfNotation.heightScale)"
+            case 1:
+                if ScaleOfNotation.diameterScale == "m" {
+                    cell.value.text = String(safeRocketData.diameter.meters)
+                } else if ScaleOfNotation.diameterScale == "ft" {
+                    cell.value.text = String(safeRocketData.diameter.feet)
+                }
+                cell.characteristic.text = "Диаметр, \(ScaleOfNotation.diameterScale)"
+            case 2:
+                if ScaleOfNotation.massScale == "kg" {
+                    cell.value.text = String(safeRocketData.mass.kg)
+                } else if ScaleOfNotation.massScale == "lb" {
+                    cell.value.text = String(safeRocketData.mass.lb)
+                }
+                cell.characteristic.text = "Масса, \(ScaleOfNotation.massScale)"
+            case 3:
+                if ScaleOfNotation.payloadWeightsScale == "kg" {
+                    cell.value.text = String(safeRocketData.payload_weights[0].kg)
+                } else if ScaleOfNotation.payloadWeightsScale == "lb" {
+                    cell.value.text = String(safeRocketData.payload_weights[0].lb)
+                }
+                cell.characteristic.text = "Нагрузка, \(ScaleOfNotation.payloadWeightsScale)"
+            default: break
+            }
+        }
+        return cell
+    }
+    
     
 }

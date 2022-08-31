@@ -10,6 +10,8 @@
 		AA1045F328BB2BA200DF5074 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1045F228BB2BA200DF5074 /* Media.xcassets */; };
 		AA1045FA28BB33D700DF5074 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1045F828BB33D700DF5074 /* SettingTableViewCell.swift */; };
 		AA1045FB28BB33D700DF5074 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1045F928BB33D700DF5074 /* SettingTableViewCell.xib */; };
+		AA5AA1BD28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA1BB28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.swift */; };
+		AA5AA1BE28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA1BC28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.xib */; };
 		AA653CCA28B9927E0067BD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CC928B9927E0067BD51 /* AppDelegate.swift */; };
 		AA653CCC28B9927E0067BD51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA653CCB28B9927E0067BD51 /* SceneDelegate.swift */; };
 		AA653CD128B9927E0067BD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA653CCF28B9927E0067BD51 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		AA1045F228BB2BA200DF5074 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		AA1045F828BB33D700DF5074 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		AA1045F928BB33D700DF5074 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		AA5AA1BB28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicRocketCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA5AA1BC28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacteristicRocketCollectionViewCell.xib; sourceTree = "<group>"; };
 		AA653CC628B9927E0067BD51 /* SpaceX-info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA653CC928B9927E0067BD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA653CCB28B9927E0067BD51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				AA653CCF28B9927E0067BD51 /* Main.storyboard */,
 				AA1045F928BB33D700DF5074 /* SettingTableViewCell.xib */,
 				AA7AF9B428BCE6BC00C982D5 /* LaunchesTableViewCell.xib */,
+				AA5AA1BC28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				AA1045F828BB33D700DF5074 /* SettingTableViewCell.swift */,
 				AA7AF9B728BCEAF200C982D5 /* LaunchesViewController.swift */,
 				AA7AF9B328BCE6BC00C982D5 /* LaunchesTableViewCell.swift */,
+				AA5AA1BB28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA653CD628B992810067BD51 /* LaunchScreen.storyboard in Resources */,
+				AA5AA1BE28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.xib in Resources */,
 				AA1045F328BB2BA200DF5074 /* Media.xcassets in Resources */,
 				AA1045FB28BB33D700DF5074 /* SettingTableViewCell.xib in Resources */,
 				AA7AF9B628BCE6BC00C982D5 /* LaunchesTableViewCell.xib in Resources */,
@@ -203,6 +210,7 @@
 				AA7AF9B228BCDEF900C982D5 /* NetworkManagerLaunches.swift in Sources */,
 				AA653CE028B9A3A90067BD51 /* SpaceRocketInfoViewController.swift in Sources */,
 				AA700D2828BB1ED000AAAD1A /* ScaleOfNotation.swift in Sources */,
+				AA5AA1BD28BE3FB300212B0F /* CharacteristicRocketCollectionViewCell.swift in Sources */,
 				AA7AF9B028BCD99200C982D5 /* Launches.swift in Sources */,
 				AA653CCA28B9927E0067BD51 /* AppDelegate.swift in Sources */,
 				AA1045FA28BB33D700DF5074 /* SettingTableViewCell.swift in Sources */,

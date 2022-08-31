@@ -60,7 +60,6 @@ extension LaunchesViewController: UITableViewDataSource {
                 cell.successLaunch.tintColor = UIColor.gray
             }
         }
-        
         return cell
     }
     
